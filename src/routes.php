@@ -40,17 +40,14 @@ $map->get('categories.create', '/categorias/create', function($request, $respons
 $map->post('categorias.store', '/categorias/store', function(ServerRequestInterface $request, $response) use($view, $entityManager, $generator) {
         echo "passou aqui";
     $data = $request->getParsedBody();
-    var_dump($data);
     $category = new Category();
 
-    //$category->setName($data['name']);
-    /*
+    $category->setName($data['name']);
+
     $entityManager->persist($category);
         $entityManager->flush();
     $uri = $generator->generate('categories.create');
-    return new Response\RedirectResponse($uri);*/
-
-
+    return new Response\RedirectResponse($uri);
 });
 
 
