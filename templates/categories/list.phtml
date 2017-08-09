@@ -1,0 +1,17 @@
+<h2>Lista de Categorias</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Descricao</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($categories as $category){?>
+        <tr>
+            <td><?php echo $category->getId()?></td>
+            <td><?php echo $category->getName()?></td>
+        </tr>
+    <?php }?>
+    </tbody>
+</table>
